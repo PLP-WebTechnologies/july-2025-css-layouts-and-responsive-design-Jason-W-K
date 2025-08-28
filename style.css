@@ -1,0 +1,99 @@
+/* Base Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  padding: 1rem;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Header & Navigation */
+header {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+/* Grid Layout for Main Content */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.content, .sidebar {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Flexbox for Card Section */
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 1rem);
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* 🌍 Responsive Breakpoints */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;
+  }
+
+  body {
+    padding: 0.5rem;
+  }
+}
